@@ -1,16 +1,14 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
 import FAQ from '@/components/FAQ';
 import Pricing from '@/components/Pricing';
 import Footer from '@/components/Footer';
-import { ChevronUp } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 
 const Index = () => {
-  const [showScrollTop, setShowScrollTop] = useState(false);
-
   useEffect(() => {
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -26,32 +24,17 @@ const Index = () => {
       });
     });
 
-    // Show/hide scroll to top button
-    const handleScroll = () => {
-      if (window.scrollY > 300) {
-        setShowScrollTop(true);
-      } else {
-        setShowScrollTop(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
     return () => {
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.removeEventListener('click', function(e) {
           e.preventDefault();
         });
       });
-      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+  const openWhatsApp = () => {
+    window.open('https://wa.me/your-number-here?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Pearfy.', '_blank');
   };
 
   return (
@@ -65,15 +48,13 @@ const Index = () => {
       </main>
       <Footer />
       
-      {/* Scroll to top button */}
+      {/* WhatsApp Button */}
       <button
-        className={`fixed bottom-6 right-6 bg-primary text-white p-3 rounded-full shadow-lg transition-all duration-300 z-20 ${
-          showScrollTop ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
-        }`}
-        onClick={scrollToTop}
-        aria-label="Voltar ao topo"
+        className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg transition-all duration-300 z-20 hover:bg-green-600 hover:scale-110"
+        onClick={openWhatsApp}
+        aria-label="Fale conosco no WhatsApp"
       >
-        <ChevronUp size={20} />
+        <MessageCircle size={24} />
       </button>
     </div>
   );
