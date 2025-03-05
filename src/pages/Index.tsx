@@ -48,9 +48,9 @@ const Index = () => {
       </main>
       <Footer />
       
-      {/* WhatsApp Button */}
+      {/* WhatsApp Button - removed hover scale effect */}
       <button
-        className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg transition-all duration-300 z-20 hover:bg-green-600 hover:scale-110"
+        className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg z-20 hover:bg-green-600"
         onClick={openWhatsApp}
         aria-label="Fale conosco no WhatsApp"
       >
