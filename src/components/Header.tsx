@@ -62,7 +62,7 @@ const Header: React.FC = () => {
             alt="Logo" 
             className="h-10 w-10 mr-2"
           />
-          <span className="text-xl font-bold text-primary">IA Solutions</span>
+          <span className="text-xl font-bold text-primary">Pearfy</span>
         </div>
         
         {/* Desktop Navigation */}

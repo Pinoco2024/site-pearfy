@@ -38,6 +38,24 @@ const Hero: React.FC = () => {
                 Fale com a gente <ArrowRight className="ml-2" size={20} />
               </button>
             </AnimatedSection>
+            
+            <AnimatedSection delay={800} className="mt-8 p-6 bg-white rounded-lg shadow-md border border-gray-100">
+              <div className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-16 h-16 overflow-hidden rounded-full border-2 border-primary">
+                  <img 
+                    src="https://www.shutterstock.com/image-vector/kyiv-ukraine-sep-09-2024-600nw-2517391429.jpg" 
+                    alt="Assistente virtual" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="flex-grow">
+                  <h3 className="font-semibold text-lg text-primary mb-2">Assistente online</h3>
+                  <p className="bg-gray-100 p-3 rounded-lg rounded-tl-none">
+                    Olá, como posso ajudar sua empresa hoje?
+                  </p>
+                </div>
+              </div>
+            </AnimatedSection>
           </AnimatedSection>
           
           <AnimatedSection className="lg:w-1/2" animation="fade-in-right" delay={300}>
