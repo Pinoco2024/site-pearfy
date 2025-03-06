@@ -41,21 +41,21 @@ const Hero: React.FC = () => {
           </AnimatedSection>
           
           <AnimatedSection className="lg:w-1/2" animation="fade-in-right" delay={300}>
-            <div className="relative">
-              {/* Direct image without phone frame or hover animations */}
-              <div className="shadow-xl rounded-xl overflow-hidden">
-                <img 
-                  src="https://www.shutterstock.com/image-vector/kyiv-ukraine-sep-09-2024-600nw-2517391429.jpg" 
-                  alt="Conversa com assistente Pearfy" 
-                  className="w-full h-auto"
-                />
-              </div>
-              
-              {/* Simple decorative elements without animations */}
-              <div className="absolute -bottom-10 -left-10 w-20 h-20 bg-secondary rounded-lg shadow-lg rotate-12" />
-              <div className="absolute -top-5 -right-5 w-16 h-16 bg-primary/20 rounded-full shadow-lg" />
+          <div className="relative">
+            {/* Ajustando o tamanho da imagem */}
+            <div className="shadow-xl rounded-xl overflow-hidden">
+              <img 
+                src="/imagem-celular.png" 
+                alt="Conversa com assistente Pearfy" 
+                className="w-64 h-auto mx-auto" // Tamanho fixo ou responsivo
+              />
             </div>
-          </AnimatedSection>
+            
+            <div className="absolute -bottom-10 -left-10 w-20 h-20 bg-secondary rounded-lg shadow-lg rotate-12" />
+            <div className="absolute -top-5 -right-5 w-16 h-16 bg-primary/20 rounded-full shadow-lg" />
+          </div>
+        </AnimatedSection>
+
         </div>
       </div>
     </section>
