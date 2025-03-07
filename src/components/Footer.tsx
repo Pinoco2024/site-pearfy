@@ -61,14 +61,6 @@ const Footer: React.FC = () => {
           <p className="text-white/70 text-sm mb-4 md:mb-0">
             &copy; {currentYear} Pearfy. Todos os direitos reservados.
           </p>
-          <div className="flex space-x-6">
-            <a>
-              Política de Privacidade
-            </a>
-            <a>
-              Termos de Uso
-            </a>
-          </div>
         </div>
       </div>
     </footer>
