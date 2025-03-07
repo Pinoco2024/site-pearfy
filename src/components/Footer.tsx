@@ -22,16 +22,20 @@ const Footer: React.FC = () => {
               Transformando empresas com soluções de automação alimentadas por inteligência artificial.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-white/80 hover:text-white transition-colors">
+              <a 
+              href="https://www.instagram.com/pearfy.app?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="text-white/80 hover:text-white transition-colors"
+              target="_blank" 
+              >
                 <Instagram size={20} />
-              </a>
-              <a href="#" className="text-white/80 hover:text-white transition-colors">
-                <Linkedin size={20} />
               </a>
               <a href="mailto:contato@pearfy.com" className="text-white/80 hover:text-white transition-colors">
                 <Mail size={20} />
               </a>
-              <a href="tel:+123456789" className="text-white/80 hover:text-white transition-colors">
+              <a 
+                href="https://wa.me/5515988065326?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20"
+                className="text-white/80 hover:text-white transition-colors"
+                target='_blank'
+                >
                 <Phone size={20} />
               </a>
             </div>
@@ -40,9 +44,15 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contato</h3>
             <address className="not-italic text-white/80">
-              <p className="mb-2">São Paulo, SP - Brasil</p>
+              <p className="mb-2">Sorocaba, SP - Brasil</p>
               <p className="mb-2">contato@pearfy.com</p>
-              <p>(11) 9999-9999</p>
+              <a 
+                href="https://wa.me/5515988065326?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20"
+                className="text-white/80 hover:text-white transition-colors"
+                target='_blank'
+                >
+                  <p className="mb-2">(15) 98806-5326</p>
+              </a>
             </address>
           </div>
         </div>
@@ -52,10 +62,10 @@ const Footer: React.FC = () => {
             &copy; {currentYear} Pearfy. Todos os direitos reservados.
           </p>
           <div className="flex space-x-6">
-            <a href="#" className="text-white/70 text-sm hover:text-white transition-colors">
+            <a>
               Política de Privacidade
             </a>
-            <a href="#" className="text-white/70 text-sm hover:text-white transition-colors">
+            <a>
               Termos de Uso
             </a>
           </div>

@@ -42,14 +42,11 @@ const Hero: React.FC = () => {
           
           <AnimatedSection className="lg:w-1/2" animation="fade-in-right" delay={300}>
           <div className="relative">
-            {/* Ajustando o tamanho da imagem */}
-            <div className="shadow-xl rounded-xl overflow-hidden">
               <img 
                 src="/imagem-celular.png" 
                 alt="Conversa com assistente Pearfy" 
                 className="w-64 h-auto mx-auto" // Tamanho fixo ou responsivo
               />
-            </div>
             
             <div className="absolute -bottom-10 -left-10 w-20 h-20 bg-secondary rounded-lg shadow-lg rotate-12" />
             <div className="absolute -top-5 -right-5 w-16 h-16 bg-primary/20 rounded-full shadow-lg" />
