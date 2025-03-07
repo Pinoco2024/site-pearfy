@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
                 <Instagram size={20} />
               </a>
               <a 
-                href="mailto:contato@pearfy.com" 
+                href="mailto:pearfysistemas@gmail.com" 
                 className="text-white/80 hover:text-white transition-colors"
               >
                 <Mail size={20} />
@@ -51,7 +51,7 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">{t.footer.contact}</h3>
             <address className="not-italic text-white/80">
               <p className="mb-2">{t.footer.address}</p>
-              <p className="mb-2">contato@pearfy.com</p>
+              <p className="mb-2">pearfysistemas@gmail.com</p>
               <a 
                 href="https://wa.me/5515988065326?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20"
                 className="text-white/80 hover:text-white transition-colors"
