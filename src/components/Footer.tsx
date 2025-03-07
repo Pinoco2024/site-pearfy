@@ -12,9 +12,9 @@ const Footer: React.FC = () => {
           <div>
             <div className="flex items-center mb-4">
               <img 
-                src="https://media.licdn.com/dms/image/v2/D4D0BAQGIDCEWUNy_aQ/company-logo_200_200/company-logo_200_200/0/1708393291420?e=2147483647&v=beta&t=KUM9ipnnAEn6OMhrVjL9RPfd6_zF99oOFe_hCIdjYjw" 
+                src="icone-sem-fundo.png"
                 alt="Logo" 
-                className="h-10 w-10 mr-2 bg-white rounded-full p-1"
+                className="h-10 w-10 mr-2 rounded-full"
               />
               <span className="text-xl font-bold">Pearfy</span>
             </div>

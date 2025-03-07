@@ -58,7 +58,7 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
           <img 
-            src="https://media.licdn.com/dms/image/v2/D4D0BAQGIDCEWUNy_aQ/company-logo_200_200/company-logo_200_200/0/1708393291420?e=2147483647&v=beta&t=KUM9ipnnAEn6OMhrVjL9RPfd6_zF99oOFe_hCIdjYjw" 
+            src="icone-sem-fundo.png"
             alt="Logo" 
             className="h-10 w-10 mr-2"
           />
