@@ -68,8 +68,10 @@ const Header: React.FC = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
-          <img src="icone-sem-fundo.png" alt="Logo" className="h-10 w-10 mr-2" />
-          <span className="text-xl font-bold text-primary">Pearfy</span>
+        <button onClick={() => scrollToSection('home')} className="flex items-center">
+    <img src="icone-sem-fundo.png" alt="Logo" className="h-10 w-10 mr-2" />
+    <span className="text-xl font-bold text-primary">Pearfy</span>
+  </button>
         </div>
 
         {/* Desktop Navigation */}
