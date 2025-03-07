@@ -2,8 +2,11 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Hero: React.FC = () => {
+  const { t } = useLanguage();
+  
   const openWhatsApp = () => {
     window.open('https://wa.me/5515988065326?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20', '_blank');
   };
@@ -19,14 +22,12 @@ const Hero: React.FC = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           <AnimatedSection className="lg:w-1/2 text-center lg:text-left">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-secondary">
-              Automatize o seu atendimento com agentes de IA que trabalham por você.
+              {t.hero.title}
             </h1>
             
             <AnimatedSection delay={300} className="mb-8 text-lg text-gray-600">
               <p>
-                Revolucione seu negócio com agentes de IA que oferecem atendimento 24/7, 
-                reduzem erros, e aumentam a eficiência no suporte e vendas. 
-                Escale seus processos sem aumentar custos.
+                {t.hero.description}
               </p>
             </AnimatedSection>
             
@@ -35,24 +36,23 @@ const Hero: React.FC = () => {
                 onClick={openWhatsApp}
                 className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg shadow-lg hover:bg-primary/90 transition-all duration-300"
               >
-                Fale com a gente <ArrowRight className="ml-2" size={20} />
+                {t.hero.button} <ArrowRight className="ml-2" size={20} />
               </button>
             </AnimatedSection>
           </AnimatedSection>
           
           <AnimatedSection className="lg:w-1/2" animation="fade-in-right" delay={300}>
-          <div className="relative">
+            <div className="relative">
               <img 
                 src="/imagem-celular.png" 
                 alt="Conversa com assistente Pearfy" 
-                className="w-64 h-auto mx-auto" // Tamanho fixo ou responsivo
+                className="w-64 h-auto mx-auto"
               />
-            
-            <div className="absolute -bottom-10 -left-10 w-20 h-20 bg-secondary rounded-lg shadow-lg rotate-12" />
-            <div className="absolute -top-5 -right-5 w-16 h-16 bg-primary/20 rounded-full shadow-lg" />
-          </div>
-        </AnimatedSection>
-
+              
+              <div className="absolute -bottom-10 -left-10 w-20 h-20 bg-secondary rounded-lg shadow-lg rotate-12" />
+              <div className="absolute -top-5 -right-5 w-16 h-16 bg-primary/20 rounded-full shadow-lg" />
+            </div>
+          </AnimatedSection>
         </div>
       </div>
     </section>

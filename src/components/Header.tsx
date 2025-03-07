@@ -1,11 +1,15 @@
+
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useLanguage } from '@/contexts/LanguageContext';
+import LanguageSelector from './LanguageSelector';
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState<string>('home');
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,25 +72,36 @@ const Header: React.FC = () => {
           <span className="text-xl font-bold text-primary">Pearfy</span>
         </div>
 
-        {/* Navegação Desktop */}
-        <nav className="hidden md:flex space-x-8">
-          {['home', 'services', 'faq', 'pricing'].map((section) => (
-            <button key={section} onClick={() => scrollToSection(section)} className={getNavLinkClass(section)}>
-              {section === 'home' && 'Home'}
-              {section === 'services' && 'Serviços'}
-              {section === 'faq' && 'Dúvidas'}
-              {section === 'pricing' && 'Preços'}
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center">
+          <nav className="flex space-x-8 mr-4">
+            <button onClick={() => scrollToSection('home')} className={getNavLinkClass('home')}>
+              {t.navbar.home}
             </button>
-          ))}
-        </nav>
+            <button onClick={() => scrollToSection('services')} className={getNavLinkClass('services')}>
+              {t.navbar.services}
+            </button>
+            <button onClick={() => scrollToSection('faq')} className={getNavLinkClass('faq')}>
+              {t.navbar.faq}
+            </button>
+            <button onClick={() => scrollToSection('pricing')} className={getNavLinkClass('pricing')}>
+              {t.navbar.pricing}
+            </button>
+          </nav>
+          
+          <LanguageSelector />
+        </div>
 
-        {/* Botão do Menu Mobile */}
-        <button className="md:hidden text-primary focus:outline-none" onClick={toggleMenu}>
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile Menu Button */}
+        <div className="md:hidden flex items-center">
+          <LanguageSelector mobile={true} />
+          <button className="text-primary focus:outline-none ml-2" onClick={toggleMenu}>
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
-      {/* Navegação Mobile */}
+      {/* Mobile Navigation */}
       <div
         className={cn(
           'md:hidden absolute top-full left-0 right-0 bg-white shadow-lg transition-all duration-300 ease-in-out overflow-hidden',
@@ -94,14 +109,18 @@ const Header: React.FC = () => {
         )}
       >
         <div className="flex flex-col p-4 space-y-4">
-          {['home', 'services', 'faq', 'pricing'].map((section) => (
-            <button key={section} onClick={() => scrollToSection(section)} className={getNavLinkClass(section)}>
-              {section === 'home' && 'Home'}
-              {section === 'services' && 'Serviços'}
-              {section === 'faq' && 'Dúvidas'}
-              {section === 'pricing' && 'Preços'}
-            </button>
-          ))}
+          <button onClick={() => scrollToSection('home')} className={getNavLinkClass('home')}>
+            {t.navbar.home}
+          </button>
+          <button onClick={() => scrollToSection('services')} className={getNavLinkClass('services')}>
+            {t.navbar.services}
+          </button>
+          <button onClick={() => scrollToSection('faq')} className={getNavLinkClass('faq')}>
+            {t.navbar.faq}
+          </button>
+          <button onClick={() => scrollToSection('pricing')} className={getNavLinkClass('pricing')}>
+            {t.navbar.pricing}
+          </button>
         </div>
       </div>
     </header>
