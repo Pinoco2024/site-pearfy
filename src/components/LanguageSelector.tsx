@@ -51,9 +51,6 @@ const LanguageSelector: React.FC<LanguageSelectorProps> = ({ mobile = false }) =
         <span className="text-xl mr-1">{flags[language]}</span>
         {!mobile && (
           <>
-            <span className="mx-1 text-gray-600">
-              {languages.find(lang => lang.code === language)?.name}
-            </span>
             <ChevronDown size={16} className="text-gray-500" />
           </>
         )}
