@@ -34,7 +34,8 @@ const Index = () => {
   }, []);
 
   const openWhatsApp = () => {
-    window.open('https://wa.me/your-number-here?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20da%20Pearfy.', '_blank');
+    window.open('https://wa.me/5515988065326?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20', '_blank');
+
   };
 
   return (
@@ -49,13 +50,13 @@ const Index = () => {
       <Footer />
       
       {/* WhatsApp Button - removed hover scale effect */}
-      <button
-        className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg z-20 hover:bg-green-600"
-        onClick={openWhatsApp}
-        aria-label="Fale conosco no WhatsApp"
-      >
-        <MessageCircle size={24} />
-      </button>
+      <img
+  src="/whatsapp.png"
+  alt="WhatsApp"
+  className="fixed bottom-6 right-6 w-14 h-14 cursor-pointer z-20"
+  onClick={openWhatsApp}
+/>
+
     </div>
   );
 };

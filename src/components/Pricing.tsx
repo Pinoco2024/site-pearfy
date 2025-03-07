@@ -5,7 +5,8 @@ import AnimatedSection from './AnimatedSection';
 
 const Pricing: React.FC = () => {
   const openWhatsApp = () => {
-    window.open('https://wa.me/your-number-here?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20agentes%20de%20IA.', '_blank');
+    window.open('https://wa.me/5515988065326?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20', '_blank');
+    
   };
 
   return (
